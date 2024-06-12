@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+a {
+  display: inline-table;
+  color: #005cbb;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-emphasis: none;
+}
+
+a:hover {
+  background-color: #005cbb33;
+}
