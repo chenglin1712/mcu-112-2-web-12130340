@@ -9,6 +9,98 @@ import { Product } from './model/product';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, ProductCardListComponent],
 })
-export class AppComponent {}
+export class AppComponent {
+  products = [
+    new Product({
+      id: 1,
+      name: '書籍A',
+      authors: ['作者甲', '作者乙', '作者丙'],
+      company: '博碩文化',
+      isShow: true,
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+      createDate: new Date(),
+      price: 10000,
+    }),
+    new Product({
+      id: 2,
+      name: '書籍B',
+      authors: ['作者甲', '作者乙', '作者丙'],
+      company: '博碩文化',
+      isShow: true,
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+      createDate: new Date(),
+      price: 10000,
+    }),
+    new Product({
+      id: 3,
+      name: '書籍C',
+      authors: ['作者甲', '作者乙', '作者丙'],
+      company: '博碩文化',
+      isShow: true,
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+      createDate: new Date(),
+      price: 10000,
+    }),
+    new Product({
+      id: 4,
+      name: '書籍D',
+      authors: ['作者甲', '作者乙', '作者丙'],
+      company: '博碩文化',
+      isShow: true,
+      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+      createDate: new Date(),
+      price: 10000,
+    }),
+  ];
+
+  onSetNoData(): void {
+    this.products = [];
+  }
+
+  onSetHasData(): void {
+    this.products = [
+      new Product({
+        id: 1,
+        name: '書籍A',
+        authors: ['作者甲', '作者乙', '作者丙'],
+        company: '博碩文化',
+        isShow: true,
+        imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+        createDate: new Date(),
+        price: 10000,
+      }),
+      new Product({
+        id: 2,
+        name: '書籍B',
+        authors: ['作者甲', '作者乙', '作者丙'],
+        company: '博碩文化',
+        isShow: true,
+        imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+        createDate: new Date(),
+        price: 10000,
+      }),
+      new Product({
+        id: 3,
+        name: '書籍C',
+        authors: ['作者甲', '作者乙', '作者丙'],
+        company: '博碩文化',
+        isShow: true,
+        imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+        createDate: new Date(),
+        price: 10000,
+      }),
+      new Product({
+        id: 4,
+        name: '書籍D',
+        authors: ['作者甲', '作者乙', '作者丙'],
+        company: '博碩文化',
+        isShow: true,
+        imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+        createDate: new Date(),
+        price: 10000,
+      }),
+    ];
+  }
+}
