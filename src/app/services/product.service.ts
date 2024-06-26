@@ -48,6 +48,10 @@ export class ProductService {
     }),
   ];
 
+  getById(productID: number): Product {
+    return this._data.find(({ id }) => id === productID)!;
+  }
+
   getList(): Product[] {
     return this._data;
   }
